@@ -27,6 +27,7 @@ function generateUniqueRandomNumber(numsBlacklist, min, max){
 
 const listOfNumbers = document.getElementById('list-number');
 const scoreParagraph = document.getElementById('score-p');
+const guessedNumberParagraph = document.getElementById('gussed-numbers');
 
 let numbersArray = [];
 
@@ -47,6 +48,7 @@ setTimeout(() => {
         let inputUserNumbers = parseInt(prompt("Insert the numbers that you remember"));
         if(numbersArray.includes(inputUserNumbers)) {
             points++;
+            guessedNumberParagraph.innerHTML += `${inputUserNumbers}  `;
         }
     }
 
